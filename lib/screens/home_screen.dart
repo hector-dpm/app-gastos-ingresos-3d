@@ -32,12 +32,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Center(child: _pages.elementAt(_selectedIndex)),
       bottomNavigationBar: NavigationBar(
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         selectedIndex: _selectedIndex,
         onDestinationSelected: _onItemTapped,
         destinations: const <NavigationDestination>[
           NavigationDestination(
-            icon: Icon(Icons.dashboard_outlined, color: Colors.white),
+            icon: Icon(
+              Icons.dashboard_outlined,
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
             selectedIcon: Icon(
               Icons.dashboard,
               color: Color.fromARGB(255, 255, 77, 0),
@@ -45,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Inicio',
           ),
           NavigationDestination(
-            icon: Icon(Icons.attach_money, color: Colors.white),
+            icon: Icon(Icons.attach_money, color: Color.fromARGB(255, 0, 0, 0)),
             selectedIcon: Icon(
               Icons.attach_money,
               color: Color.fromARGB(255, 255, 77, 0),
@@ -53,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Transacciones',
           ),
           NavigationDestination(
-            icon: Icon(Icons.print, color: Colors.white),
+            icon: Icon(Icons.print, color: Color.fromARGB(255, 0, 0, 0)),
             selectedIcon: Icon(
               Icons.print,
               color: Color.fromARGB(255, 255, 77, 0),
@@ -61,7 +64,10 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Impresoras',
           ),
           NavigationDestination(
-            icon: Icon(Icons.inventory_2_outlined, color: Colors.white),
+            icon: Icon(
+              Icons.inventory_2_outlined,
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
             selectedIcon: Icon(
               Icons.inventory_2,
               color: Color.fromARGB(255, 255, 77, 0),
