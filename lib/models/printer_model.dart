@@ -31,17 +31,17 @@ class Printer {
 
   Map<String, dynamic> toJson() => {
     'id': id,
-    'name': name,
-    'model': model,
-    'cost': cost,
-    'purchase_date': purchaseDate.toIso8601String(),
+    'nombre': name,
+    'modelo': model,
+    'costo': cost,
+    'fecha_compra': purchaseDate.toIso8601String(),
   };
 
   static Printer fromJson(Map<String, dynamic> json) => Printer(
     id: json['id'] as int?,
-    name: json['name'] as String,
-    model: json['model'] as String,
-    cost: (json['cost'] as num).toDouble(),
-    purchaseDate: DateTime.parse(json['purchase_date'] as String),
+    name: json['nombre'] as String,
+    model: json['modelo'] as String,
+    cost: (json['costo'] as num).toDouble(),
+    purchaseDate: DateTime.parse(json['fecha_compra'] as String),
   );
 }

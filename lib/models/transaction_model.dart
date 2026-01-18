@@ -1,6 +1,6 @@
 class TransactionModel {
   final int? id;
-  final String type; // 'INCOME' or 'EXPENSE'
+  final String type;
   final double amount;
   final String description;
   final DateTime date;
@@ -39,10 +39,10 @@ class TransactionModel {
 
   Map<String, dynamic> toJson() => {
     'id': id,
-    'type': type,
-    'amount': amount,
-    'description': description,
-    'date': date.toIso8601String(),
+    'tipo': type,
+    'cantidad': amount,
+    'descripcion': description,
+    'fecha': date.toIso8601String(),
     'printer_id': printerId,
     'material_id': materialId,
   };
@@ -50,10 +50,10 @@ class TransactionModel {
   static TransactionModel fromJson(Map<String, dynamic> json) =>
       TransactionModel(
         id: json['id'] as int?,
-        type: json['type'] as String,
-        amount: (json['amount'] as num).toDouble(),
-        description: json['description'] as String,
-        date: DateTime.parse(json['date'] as String),
+        type: json['tipo'] as String,
+        amount: (json['cantidad'] as num).toDouble(),
+        description: json['descripcion'] as String,
+        date: DateTime.parse(json['fecha'] as String),
         printerId: json['printer_id'] as int?,
         materialId: json['material_id'] as int?,
       );

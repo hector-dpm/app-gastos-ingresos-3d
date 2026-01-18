@@ -39,21 +39,21 @@ class MaterialModel {
 
   Map<String, dynamic> toJson() => {
     'id': id,
-    'name': name,
-    'type': type,
+    'nombre': name,
+    'tipo': type,
     'color': color,
-    'weight_g': weightG,
-    'cost': cost,
-    'purchase_date': purchaseDate.toIso8601String(),
+    'peso_g': weightG,
+    'costo': cost,
+    'fecha_compra': purchaseDate.toIso8601String(),
   };
 
   static MaterialModel fromJson(Map<String, dynamic> json) => MaterialModel(
     id: json['id'] as int?,
-    name: json['name'] as String,
-    type: json['type'] as String,
+    name: json['nombre'] as String,
+    type: json['tipo'] as String,
     color: json['color'] as String,
-    weightG: (json['weight_g'] as num).toDouble(),
-    cost: (json['cost'] as num).toDouble(),
-    purchaseDate: DateTime.parse(json['purchase_date'] as String),
+    weightG: (json['peso_g'] as num).toDouble(),
+    cost: (json['costo'] as num).toDouble(),
+    purchaseDate: DateTime.parse(json['fecha_compra'] as String),
   );
 }

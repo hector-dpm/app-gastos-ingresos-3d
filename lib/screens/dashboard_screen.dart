@@ -20,7 +20,7 @@ class DashboardScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             _buildSummaryCard(
-              'Balance Neto',
+              'Dinero Total',
               totals['net'] ?? 0.0,
               currencyFormat,
               isNet: true,
@@ -34,7 +34,7 @@ class DashboardScreen extends StatelessWidget {
                     totals['income'] ?? 0.0,
                     currencyFormat,
                     color: Colors.green.shade100,
-                    textColor: Colors.green.shade900,
+                    textColor: const Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
                 const SizedBox(width: 16),
@@ -44,13 +44,13 @@ class DashboardScreen extends StatelessWidget {
                     totals['expense'] ?? 0.0,
                     currencyFormat,
                     color: Colors.red.shade100,
-                    textColor: Colors.red.shade900,
+                    textColor: const Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 24),
-            Text('Recientes', style: Theme.of(context).textTheme.titleLarge),
+            Text('Recientes:', style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 8),
             // Show only last 5 transactions
             ListView.builder(
@@ -99,9 +99,7 @@ class DashboardScreen extends StatelessWidget {
 
     if (isNet) {
       cardColor = amount >= 0 ? Colors.blue.shade100 : Colors.orange.shade100;
-      txtColor = amount >= 0
-          ? Colors.blue.shade900
-          : Colors.deepOrange.shade900;
+      txtColor = Colors.black;
     }
 
     return Card(

@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Transacciones',
           ),
           NavigationDestination(
-            icon: Icon(Icons.print_outlined),
+            icon: Icon(Icons.print),
             selectedIcon: Icon(Icons.print),
             label: 'Impresoras',
           ),

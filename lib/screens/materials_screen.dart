@@ -58,14 +58,13 @@ class MaterialsScreen extends StatelessWidget {
   }
 
   Color _getColor(String colorName) {
-    // Simple mapping for demo purposes
     final name = colorName.toLowerCase();
-    if (name.contains('rojo') || name.contains('red')) return Colors.red;
-    if (name.contains('azul') || name.contains('blue')) return Colors.blue;
-    if (name.contains('verde') || name.contains('green')) return Colors.green;
-    if (name.contains('negro') || name.contains('black')) return Colors.black;
-    if (name.contains('blanco') || name.contains('white')) {
-      return Colors.grey; // Visible on white bg
+    if (name.contains('rojo')) return Colors.red;
+    if (name.contains('azul')) return Colors.blue;
+    if (name.contains('verde')) return Colors.green;
+    if (name.contains('negro')) return Colors.black;
+    if (name.contains('blanco')) {
+      return Colors.grey;
     }
     return Colors.grey;
   }

@@ -17,9 +17,6 @@ class TransactionProvider with ChangeNotifier {
 
   Future<void> loadTotals() async {
     _totals = await DatabaseHelper.instance.getTotals();
-    // notifyListeners() is called in loadTransactions, but if we call this independently:
-    // notifyListeners();
-    // Usually loadTransactions calls this, so we rely on that.
   }
 
   Future<void> addTransaction(TransactionModel transaction) async {
