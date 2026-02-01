@@ -1,18 +1,17 @@
-# app_gastos_ingresos_3d
+# Gestor de Impresión 3D
 
-A new Flutter project.
+Aplicación Flutter para la gestión de ingresos, gastos y costos de impresión 3D.
 
-## Getting Started
+## 📖 Documentación
+- [Manual de Usuario](./MANUAL_USUARIO.md): Guía detallada sobre cómo utilizar todas las funcionalidades de la aplicación.
 
-This project is a starting point for a Flutter application.
+## Características
+- Gestión de inventario (Impresoras y Materiales).
+- Cálculo automático de costos de impresión (material + energía).
+- Registro de ventas y gastos generales.
+- Panel de control financiero con visión de ganancias netas.
 
-A few resources to get you started if this is your first Flutter project:
+## Primeros Pasos
+Este proyecto es una aplicación Flutter multiplataforma (Windows, Android, iOS).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-Hola Caracola
+Para más ayuda sobre el desarrollo de Flutter, consulta la [documentación online](https://docs.flutter.dev/).
