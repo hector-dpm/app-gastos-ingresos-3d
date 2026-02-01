@@ -5,7 +5,8 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'providers/printer_provider.dart';
 import 'providers/material_provider.dart';
-import 'providers/transaction_provider.dart';
+import 'providers/sale_provider.dart';
+import 'providers/expense_provider.dart';
 import 'screens/home_screen.dart';
 
 void main() async {
@@ -33,15 +34,18 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => MaterialProvider()..loadMaterials(),
         ),
+        ChangeNotifierProvider(create: (_) => SaleProvider()..loadSales()),
         ChangeNotifierProvider(
-          create: (_) => TransactionProvider()..loadTransactions(),
+          create: (_) => ExpenseProvider()..loadExpenses(),
         ),
       ],
       child: MaterialApp(
         title: 'Gestor Impresión 3D',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 0, 0, 0),
+          ),
           useMaterial3: true,
           cardTheme: CardThemeData(
             elevation: 2,

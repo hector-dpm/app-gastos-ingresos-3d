@@ -4,6 +4,8 @@ class Printer {
   final String model;
   final double cost;
   final DateTime purchaseDate;
+  final int printCount; // Contador de impresiones
+  final int powerWatts; // Consumo en Watts
 
   Printer({
     this.id,
@@ -11,6 +13,8 @@ class Printer {
     required this.model,
     required this.cost,
     required this.purchaseDate,
+    this.printCount = 0,
+    this.powerWatts = 300, // Valor por defecto común
   });
 
   Printer copyWith({
@@ -19,6 +23,8 @@ class Printer {
     String? model,
     double? cost,
     DateTime? purchaseDate,
+    int? printCount,
+    int? powerWatts,
   }) {
     return Printer(
       id: id ?? this.id,
@@ -26,6 +32,8 @@ class Printer {
       model: model ?? this.model,
       cost: cost ?? this.cost,
       purchaseDate: purchaseDate ?? this.purchaseDate,
+      printCount: printCount ?? this.printCount,
+      powerWatts: powerWatts ?? this.powerWatts,
     );
   }
 
@@ -35,6 +43,8 @@ class Printer {
     'modelo': model,
     'costo': cost,
     'fecha_compra': purchaseDate.toIso8601String(),
+    'contador_impresiones': printCount,
+    'consumo_watts': powerWatts,
   };
 
   static Printer fromJson(Map<String, dynamic> json) => Printer(
@@ -43,5 +53,7 @@ class Printer {
     model: json['modelo'] as String,
     cost: (json['costo'] as num).toDouble(),
     purchaseDate: DateTime.parse(json['fecha_compra'] as String),
+    printCount: (json['contador_impresiones'] as int?) ?? 0,
+    powerWatts: (json['consumo_watts'] as int?) ?? 300,
   );
 }

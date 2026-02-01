@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dashboard_screen.dart';
-import 'transactions_screen.dart';
-import 'printers_screen.dart';
-import 'materials_screen.dart';
+import 'components_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,9 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const List<Widget> _pages = <Widget>[
     DashboardScreen(),
-    TransactionsScreen(),
-    PrintersScreen(),
-    MaterialsScreen(),
+    ComponentsScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -32,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Center(child: _pages.elementAt(_selectedIndex)),
       bottomNavigationBar: NavigationBar(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         selectedIndex: _selectedIndex,
         onDestinationSelected: _onItemTapped,
         destinations: const <NavigationDestination>[
@@ -48,31 +44,15 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Inicio',
           ),
           NavigationDestination(
-            icon: Icon(Icons.attach_money, color: Color.fromARGB(255, 0, 0, 0)),
-            selectedIcon: Icon(
-              Icons.attach_money,
-              color: Color.fromARGB(255, 255, 77, 0),
-            ),
-            label: 'Transacciones',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.print, color: Color.fromARGB(255, 0, 0, 0)),
-            selectedIcon: Icon(
-              Icons.print,
-              color: Color.fromARGB(255, 255, 77, 0),
-            ),
-            label: 'Impresoras',
-          ),
-          NavigationDestination(
             icon: Icon(
-              Icons.inventory_2_outlined,
-              color: Color.fromARGB(255, 0, 0, 0),
+              Icons.inventory_outlined,
+              color: Color.fromARGB(255, 46, 46, 46),
             ),
             selectedIcon: Icon(
-              Icons.inventory_2,
+              Icons.inventory,
               color: Color.fromARGB(255, 255, 77, 0),
             ),
-            label: 'Materiales',
+            label: 'Componentes',
           ),
         ],
       ),
