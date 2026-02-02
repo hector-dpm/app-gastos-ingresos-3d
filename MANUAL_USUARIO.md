@@ -85,4 +85,23 @@ En el Panel de Control, los colores te indicarán el estado de tu negocio:
 Puedes pulsar en **"Ver todas"** en las secciones de ventas o gastos para ver el historial completo y eliminar registros si fuera necesario.
 
 ---
+
+## 7. Consejos y Buenas Prácticas
+- **Pesa tus bobinas vacías**: Para tener un control exacto del stock, resta el peso del carrete de plástico (suele estar entre 200g y 250g) al peso total si el fabricante no lo indica.
+- **Registra los fallos**: Si una impresión falla a mitad de camino, regístrala como una venta de 0€ pero con los gramos consumidos para que el stock de material siga siendo real.
+- **Margen de error**: Utiliza el campo "Otros Costos" en el registro de ventas para añadir un pequeño porcentaje de amortización por mantenimiento o posibles fallos futuros.
+
+---
+
+## 8. Preguntas Frecuentes
+**¿Cómo se calcula el costo de electricidad?**
+Aplicamos la fórmula: `(Vatios de la impresora / 1000) * Horas de impresión * Precio del KWh`.
+
+**¿Dónde se guardan mis datos?**
+Los datos se guardan localmente en tu dispositivo. La aplicación no envía tus datos financieros a ningún servidor externo por razones de privacidad.
+
+**¿Qué pasa si borro una venta por error?**
+No te preocupes. Al borrarla, la aplicación automáticamente devuelve los gramos de filamento al inventario y resta 1 al contador de la impresora.
+
+---
 *Manual generado automáticamente para la aplicación Gestor Impresión 3D - 2024*
